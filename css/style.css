@@ -1,0 +1,28 @@
+body,#app{height:100%;}
+body,.ant-layout,.anchor{background:#FFF;}
+.divider{margin:0;}
+.logo{display:inline-block;width:57px;height:57px; background:url(../image/logo.svg); background-size: cover; margin:0 8px -22px 0;}
+.title{display:inline-block;letter-spacing:5px;font-size:18px;margin:0 5px -8px 0;}
+.sider{background:#FFF;height:100%;position:sticky;top:0;}
+.content{background:#FFF;letter-spacing:1px;padding:24px;}
+.ant-anchor{font-size:12px;}
+/* 文档样式 */
+h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,.7);font-weight:400;}
+.content a:hover{text-decoration:none;}
+.content hr{background:#E0E0E0;height:1px;width:100%;border:0;margin:30px 0;}
+.content table{width:100%;}
+.content table th{text-align:center;font-weight:400;}
+.content table td,.content table th{border:1px solid #E0E0E0;padding:10px 15px;}
+.content table th,.content table tr:nth-child(2n){background:#F5F5F5;}
+.content blockquote{border-left:5px solid #EEE;background:#F5F5F5;padding:15px;}
+.content blockquote p:last-child{margin-bottom:0;}
+.content code{padding:3px 5px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,Sans-Serif;font-size:12px;background:#F5F5F5;}
+.content pre{color:#C5C8C6;background:#222;padding:15px;}
+.content pre code{padding:0;word-break:normal;white-space:pre-wrap;word-wrap:break-word;background:#222;}
+.content ul{list-style-type:circle;}
+.content img{max-width:100%;}
+/* 滚动条样式 */
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-thumb:vertical{background:#E3E3E3;}
+::-webkit-scrollbar-thumb:hover{background:#D3D3D3;}
+::selection{color:#FFF;background:#5CADFF;}

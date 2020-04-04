@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:;base64,=">
+    <link href="css/antd.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/vue.min.js"></script>
+    <script src="js/antd.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/marked.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <a-layout>
+        <!---------- 头部区域开始 ---------->
+        <a-layout-header class="header" style="background:#FFF">
+            <div class="logo"></div>
+            <div class="title">{{title}}</div>
+        </a-layout-header>
+        <!---------- 头部区域结束 ---------->
+
+        <a-divider class="divider"></a-divider>
+
+        <a-layout>
+            <!---------- 导航菜单开始 ---------->
+            <a-layout-sider width="300" class="sider">
+                <a-menu mode="inline" :default-open-keys="['0']" :default-selected-keys="['0-0']">
+                    <a-sub-menu v-for="(sub,m) in menu" :key="`${m.toString()}`">
+                        <span slot="title"><a-icon :type="sub.icon"></a-icon>{{sub.title}}</span>
+                        <a-menu-item v-for="(item,n) in sub.child" :key="`${m}-${n}`" @click="getDoc(item.key)">
+                            {{item.title}}
+                        </a-menu-item>
+                    </a-sub-menu>
+                </a-menu>
+            </a-layout-sider>
+            <!---------- 导航菜单结束 ---------->
+
+            <!---------- 正文区域开始 ---------->
+            <a-layout-content v-html="content" class="content"></a-layout-content>
+            <!---------- 正文区域结束 ---------->
+
+            <!---------- 锚点区域开始 ---------->
+            <a-layout-sider class="anchor">
+                <a-anchor>
+                    <a-anchor-link v-for="item in anchor" :href="item.href" :title="item.title"></a-anchor-link>
+                </a-anchor>
+            </a-layout-sider>
+            <!---------- 锚点区域结束 ---------->
+
+            <!---------- 回到顶部开始 ---------->
+            <a-back-top>
+                <div class="ant-back-top-inner">
+                    <a-icon type="arrow-up"></a-icon>
+                </div>
+            </a-back-top>
+            <!---------- 回到顶部结束 ---------->
+        </a-layout>
+    </a-layout>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: '',
+            menu: [],
+            anchor: [],
+            content: ''
+        },
+        methods: {
+            init: function () {
+                let _this = this;
+                axios.get(`config.json?t=${(new Date()).getTime()}`).then(function (rsp) {
+                    document.title = _this.title = rsp.data.title; // 设置网页标题
+                    _this.menu = rsp.data.menu; // 设置导航菜单
+                    _this.getDoc(_this.menu[0].child[0].key); // 默认加载第一个文档
+                });
+            },
+            // 读取文档
+            getDoc: function (key) {
+                let _this = this;
+                _this.anchor = [];
+                axios.get(`doc/${key}.md?t=${(new Date()).getTime()}`).then(function (rsp) {
+                    const renderer = new marked.Renderer();
+                    renderer.link = _this.rendererLink();
+                    renderer.heading = _this.rendererHeading();
+                    _this.content = marked(rsp.data, {renderer: renderer});
+                    window.scrollTo({left: 0, top: 0, behavior: 'smooth'})
+                });
+            },
+            // 渲染链接（新增新窗口打开）
+            rendererLink: function () {
+                return function (href, title, text) {
+                    let out = `<a target="_blank" href="${href}"`;
+                    out += title ? ` title="${title}"` : '';
+                    return `${out}>${text}</a>`;
+                }
+            },
+            // 渲染标题（新增支持锚点链接）
+            rendererHeading: function () {
+                let _this = this;
+                return function (text, level) {
+                    _this.anchor.push({title: text, href: `#${text}`});
+                    return `<h${level} id="${text}">${text}</h${level}>`;
+                };
+            }
+        },
+        mounted: function () {
+            this.init();
+        }
+    });
+</script>
+</body>
+</html>

@@ -27,11 +27,11 @@ doc/doc6.md
     "menu": [
         {
             "title": "父级菜单 1", // 父级菜单名称
-            "icon": "folder", // 父级菜单图标（图标地址：https://antdv.com/components/icon-cn/）
+            "icon": "folder", // 父级菜单图标（图标：https://antdv.com/components/icon-cn/）
             "child": [
                 {
                     "title": "子级菜单 1", // 子级菜单名称
-                    "key": "doc1" // 子级菜单文档名称（doc/doc1.md）
+                    "key": "doc1" // 子级菜单文档名称（对应 doc/doc1.md）
                 },
                 {
                     "title": "子级菜单 2",
