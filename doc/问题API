@@ -1,0 +1,7 @@
+/**
+ * @brief 获取对象的parent对象
+ * @param e，虚拟机参数
+ * @return
+ */
+evm_val_t* evm_get_parent(evm_t *e, evm_val_t o);
+

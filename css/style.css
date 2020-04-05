@@ -7,7 +7,7 @@ body,.ant-layout,.anchor{background:#FFF;}
 .content{background:#FFF;letter-spacing:1px;padding:24px;}
 .ant-anchor{font-size:12px;}
 /* 文档样式 */
-h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,.7);font-weight:400;}
+h1,h2,h3,h4,h5,h6{color:rgba(0,0,0,.7);font-weight:bold;}
 .content a:hover{text-decoration:none;}
 .content hr{background:#E0E0E0;height:1px;width:100%;border:0;margin:30px 0;}
 .content table{width:100%;}
