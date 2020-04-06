@@ -94,16 +94,40 @@
             ]
         },
         {
-            "title": "iot库evm",
+            "title": "iot库evm之外设控制",
             "icon": "folder",
             "child": [
                 {
-                    "title": "子级菜单 5",
-                    "key": "doc5"
+                    "title": "ADC Class",
+                    "key": "evm_class_adc"
                 },
                 {
-                    "title": "子级菜单 6",
-                    "key": "doc6"
+                    "title": "DAC Class",
+                    "key": "evm_class_dac"
+                },
+                {
+                    "title": "Flash Class",
+                    "key": "evm_class_flash"
+                },
+                {
+                    "title": "LCD Class",
+                    "key": "evm_class_lcd"
+                },
+                {
+                    "title": "LED Class",
+                    "key": "evm_class_led"
+                },
+                {
+                    "title": "Pin Class",
+                    "key": "evm_class_pin"
+                },
+                {
+                    "title": "RTC Class",
+                    "key": "evm_class_rtc"
+                },
+                {
+                    "title": "Switch Class",
+                    "key": "evm_class_switch"
                 }
             ]
         }
