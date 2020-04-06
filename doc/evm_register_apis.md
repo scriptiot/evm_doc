@@ -84,6 +84,13 @@ void evm_register_file_load(intptr_t fn);
 
 ### 2.1 接口实现
 ```c
+/**
+ * @brief 加载main运行脚本和加模块脚本
+ * @param e, 虚拟机对象
+ * @param path, 脚本路径
+ * @param type, EVM_LOAD_MAIN代表main运行脚本，非EVM_LOAD_MAIN代表加载模块
+ * @return
+ */
 const char * vm_load(evm_t * e, char * path, int type)
 {
     int file_name_len = strlen(path) + 1;
@@ -121,7 +128,11 @@ const char * vm_load(evm_t * e, char * path, int type)
     return buffer;
 }
 
-
+/**
+ * @brief 外部内存申请接口
+ * @param size, 申请内存大小
+ * @return 内存成功分配的对象指针
+ */
 void * vm_malloc(int size)
 {
     void * m = malloc(size);
@@ -129,6 +140,11 @@ void * vm_malloc(int size)
     return m;
 }
 
+/**
+ * @brief 外部内存释放接口
+ * @param mem, 需要释放的对象指针
+ * @return
+ */
 void vm_free(void * mem)
 {
     if(mem) free(mem);

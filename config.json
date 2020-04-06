@@ -66,6 +66,20 @@
             ]
         },
         {
+            "title": "虚拟机启动适配指南",
+            "icon": "folder",
+            "child": [
+                {
+                    "title": "基于evm的lib库简介",
+                    "key": "evm_lib"
+                },
+                {
+                    "title": "虚拟机启动main.c指南",
+                    "key": "evm_main"
+                }
+            ]
+        },
+        {
             "title": "基于littlevgl的qml",
             "icon": "folder",
             "child": [
