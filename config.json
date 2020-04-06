@@ -80,6 +80,20 @@
             ]
         },
         {
+            "title": "虚拟机标准扩展模块指南",
+            "icon": "folder",
+            "child": [
+                {
+                    "title": "扩展模块简介",
+                    "key": "evm_module"
+                },
+                {
+                    "title": "扩展模块核心API",
+                    "key": "evm_module_api"
+                }
+            ]
+        },
+        {
             "title": "基于littlevgl的qml",
             "icon": "folder",
             "child": [
