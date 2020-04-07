@@ -20,7 +20,7 @@
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var adc = new m.ADC();
 print(adc.read())

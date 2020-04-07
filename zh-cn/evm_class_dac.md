@@ -19,7 +19,7 @@
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var dac new m.DAC();
 dac.write(1000);

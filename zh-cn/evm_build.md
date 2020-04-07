@@ -7,7 +7,7 @@
 
 
 ```c
-/c/Qt/Qt5.14.1/Tools/mingw730_64/bin/gcc.exe -std=c99 main.c ../thirds/cjson/cJSON.c -DQMAKE_TARGET=\"ejs\" -DQMAKE_VERSION=\"1.0\" -L ../lib/x86_64-windows-mingw -l:libejs.a -I ../include/ -I ../thirds/cjson/ -o ejs.exe
+/c/Qt/Qt5.14.1/Tools/mingw730_64/bin/gcc.exe -std=c99 main.c  -DQMAKE_TARGET=\"ejs\" -DQMAKE_VERSION=\"1.0\" -L ../lib/x86_64-windows-mingw -l:libejs.a -I ../include/ -o ejs.exe
 ```
 
 ![evm_build_1](./image/evm_build_1.gif)
