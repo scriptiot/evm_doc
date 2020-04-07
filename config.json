@@ -74,8 +74,12 @@
                     "key": "evm_lib"
                 },
                 {
-                    "title": "虚拟机启动main.c指南",
+                    "title": "虚拟机启动main.c解析",
                     "key": "evm_main"
+                },
+                {
+                    "title": "x86平台快速编译构建体验",
+                    "key": "evm_build"
                 }
             ]
         },
@@ -88,7 +92,7 @@
                     "key": "evm_module"
                 },
                 {
-                    "title": "扩展模块核心API",
+                    "title": "如何使用扩展模块API",
                     "key": "evm_module_api"
                 }
             ]

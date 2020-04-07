@@ -56,3 +56,17 @@ evm_val_t *evm_native_function_create(evm_t *e, evm_native_fn fn, int attr_len);
 evm_err_t evm_native_add(evm_t * e, evm_builtin_t * n);
 
 ```
+
+
+### 9.5 创建指定名称的扩展模块
+
+```c
+/**
+ * @brief 创建指定名称的模块
+ * @param e，虚拟机
+ * @param name，名称
+ * @param n，内置成员列表
+ * @return 内置对象
+ */
+evm_val_t evm_module_create(evm_t * e, const char* name, evm_builtin_t *n);
+```

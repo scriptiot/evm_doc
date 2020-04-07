@@ -1,4 +1,4 @@
-## 1. EVM标准化的扩展API
+## 1. EVM标准化的API扩展接口
 
 ---
 
@@ -15,20 +15,19 @@ typedef struct evm_builtin_t{
 
 ```
 
----
+### 1.2 evm_module_create
 
-### 1.2 evm_native_add
-
-> evm_native_add把evm_builtin_t列表中所有的API注册进虚拟机，成为内置属性，内置函数或内置对象。
+> `evm_module_create`把`evm_builtin_t`列表中所有的API注册到命名为`name`的模块中
 
 ```c
 /**
- * @brief 添加内置函数列表
+ * @brief 创建指定名称的模块
  * @param e，虚拟机
- * @param n，内置函数列表
- * @return 错误码
+ * @param name，名称
+ * @param n，内置成员列表
+ * @return 内置对象
  */
-evm_err_t evm_native_add(evm_t * e, evm_builtin_t * n);
+evm_val_t evm_module_create(evm_t * e, const char* name, evm_builtin_t *n);
 ```
 
 ## 2. 扩展模块注册流程
@@ -38,30 +37,20 @@ evm_err_t evm_native_add(evm_t * e, evm_builtin_t * n);
 
 
 
-/**********注册API模块*****************/
-int ecma_module(evm_t * e, int number_of_timers){
-
-    evm_builtin_t natives[] = {
-        {"set_prototype", evm_mk_native( (intptr_t)ecma_set_prototype )},
-        {"isNaN", evm_mk_native( (intptr_t)ecma_isNaN )},
-        {".new", evm_mk_native( (intptr_t)ecma_new )},
-        {"typeof", evm_mk_native( (intptr_t)ecma_typeof )},
-        {"setTimeout", evm_mk_native( (intptr_t)ecma_setTimeout )},
-        {"setInterval", evm_mk_native( (intptr_t)ecma_setInterval )},
-        {"clearInterval", evm_mk_native( (intptr_t)ecma_clearInterval )},
-        {"atob", evm_mk_native( (intptr_t)ecma_atob )},
-        {"btoa", evm_mk_native( (intptr_t)ecma_btoa )},
-        {"RegExp", *ecma_regex_init(e)},
-        {"Math", *Math},
-        {"Object", *Object},
-        {"Array", *Array},
-        {"Number", *Number},
-        {"String", *String},
-        {"Date", *ecma_date_init(e)},
-        {"JSON", *json_object},
-        {NULL, EVM_VAL_UNDEFINED}
+/**********创建模块*****************/
+int evm_module(evm_t * e){
+	evm_builtin_t module[] = {
+		{"Pin", evm_class_pin(e)},
+		{"LCD", evm_class_lcd(e)},
+		{"LED", evm_class_led(e)},
+		{"LED", evm_class_flash(e)},
+		{"ADC", evm_class_adc(e)},
+		{"DAC", evm_class_dac(e)},
+		{"RTC", evm_class_rtc(e)},
+		{"Switch", evm_class_switch(e)},
+        {NULL, NULL}
     };
-    return evm_native_add(e, natives);
+    evm_module_create(e, "evm", module);
+	return e->err;
 }
-
 ```
