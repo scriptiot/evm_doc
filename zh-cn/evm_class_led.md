@@ -30,7 +30,7 @@ LED灯在打开和关闭之前切换。
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var led = m.LED(1);
 led.on();

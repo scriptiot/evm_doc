@@ -36,7 +36,7 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var pin = new m.Pin(m.Pin.GPIOB, 5, m.Pin.OUT_PP);
 pin.value(0);

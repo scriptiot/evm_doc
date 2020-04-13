@@ -1,116 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <link rel="icon" href="data:;base64,=">
-    <link href="css/antd.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="js/vue.min.js"></script>
-    <script src="js/antd.min.js"></script>
-    <script src="js/axios.min.js"></script>
-    <script src="js/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./zh-cn/image/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./zh-cn/image/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./zh-cn/image/logo.png">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+    <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+    <style type="text/css">
+    body {
+        font-family: Helvetica, Arial, "Lucida Grande", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    }
+
+    section .cover .show{
+        background:white;
+    }
+
+    .markdown-section code {
+        white-space: pre-line;
+    }
+
+    .nav {
+        margin-top:40px;
+        width: var(--toc-width, 320px);
+        align-self: flex-start;
+        flex: 0 0 auto;
+    }
+
+    .page_toc ul {
+      line-height: 2em;
+    }
+    </style>
 </head>
+
 <body>
-<div id="app">
-    <a-layout>
-        <!---------- 头部区域开始 ---------->
-        <a-layout-header class="header" style="background:#FFF">
-            <div class="logo"></div>
-            <div class="title">{{title}}</div>
-        </a-layout-header>
-        <!---------- 头部区域结束 ---------->
-
-        <a-divider class="divider"></a-divider>
-
-        <a-layout>
-            <!---------- 导航菜单开始 ---------->
-            <a-layout-sider width="300" class="sider">
-                <a-menu mode="inline" :default-open-keys="['0']" :default-selected-keys="['0-0']">
-                    <a-sub-menu v-for="(sub,m) in menu" :key="`${m.toString()}`">
-                        <span slot="title"><a-icon :type="sub.icon"></a-icon>{{sub.title}}</span>
-                        <a-menu-item v-for="(item,n) in sub.child" :key="`${m}-${n}`" @click="getDoc(item.key)">
-                            {{item.title}}
-                        </a-menu-item>
-                    </a-sub-menu>
-                </a-menu>
-            </a-layout-sider>
-            <!---------- 导航菜单结束 ---------->
-
-            <!---------- 正文区域开始 ---------->
-            <a-layout-content v-html="content" class="content"></a-layout-content>
-            <!---------- 正文区域结束 ---------->
-
-            <!---------- 锚点区域开始 ---------->
-            <a-layout-sider class="anchor">
-                <a-anchor>
-                    <a-anchor-link v-for="item in anchor" :href="item.href" :title="item.title"></a-anchor-link>
-                </a-anchor>
-            </a-layout-sider>
-            <!---------- 锚点区域结束 ---------->
-
-            <!---------- 回到顶部开始 ---------->
-            <a-back-top>
-                <div class="ant-back-top-inner">
-                    <a-icon type="arrow-up"></a-icon>
-                </div>
-            </a-back-top>
-            <!---------- 回到顶部结束 ---------->
-        </a-layout>
-    </a-layout>
-</div>
-
-<script>
-    new Vue({
-        el: '#app',
-        data: {
-            title: '',
-            menu: [],
-            anchor: [],
-            content: ''
-        },
-        methods: {
-            init: function () {
-                let _this = this;
-                axios.get(`config.json?t=${(new Date()).getTime()}`).then(function (rsp) {
-                    document.title = _this.title = rsp.data.title; // 设置网页标题
-                    _this.menu = rsp.data.menu; // 设置导航菜单
-                    _this.getDoc(_this.menu[0].child[0].key); // 默认加载第一个文档
-                });
+    <div id="app"></div>
+    <script>
+    window.$docsify = {
+        name: 'EVM',
+        repo: 'https://github.com/scriptiot/evm',
+        logo: 'zh-cn/image/evm_logo.png height="64px"',
+        coverpage: true,
+        autoHeader: true,
+        loadSidebar: true,
+        loadNavbar: true,
+        subMaxLevel: 0,
+        auto2top: true,
+        mergeNavbar: true,
+        // homepage: 'README.md',
+        nameLink: 'https://github.com/scriptiot/evm',
+        // notFoundPage: {
+        //     '/': 'evm_what.md',
+        // }
+        search: {
+            placeholder: {
+                '/': '搜索',
+                '/zh-cn/': '搜索',
+                '/en-us/': 'Type to search'
             },
-            // 读取文档
-            getDoc: function (key) {
-                let _this = this;
-                _this.anchor = [];
-                axios.get(`doc/${key}.md?t=${(new Date()).getTime()}`).then(function (rsp) {
-                    const renderer = new marked.Renderer();
-                    renderer.link = _this.rendererLink();
-                    renderer.heading = _this.rendererHeading();
-                    _this.content = marked(rsp.data, {renderer: renderer});
-                    window.scrollTo({left: 0, top: 0, behavior: 'smooth'})
-                });
-            },
-            // 渲染链接（新增新窗口打开）
-            rendererLink: function () {
-                return function (href, title, text) {
-                    let out = `<a target="_blank" href="${href}"`;
-                    out += title ? ` title="${title}"` : '';
-                    return `${out}>${text}</a>`;
-                }
-            },
-            // 渲染标题（新增支持锚点链接）
-            rendererHeading: function () {
-                let _this = this;
-                return function (text, level) {
-                    _this.anchor.push({title: text, href: `#${text}`});
-                    return `<h${level} id="${text}">${text}</h${level}>`;
-                };
+            noData: {
+                '/': '找不到结果',
+                '/zh-cn/': '找不到结果',
+                '/en-us/': 'No Results'
             }
         },
-        mounted: function () {
-            this.init();
-        }
-    });
-</script>
+        plugins: [
+            function(hook) {
+                var footer = [
+                    '<hr/>',
+                    '<footer style="height: 60px">',
+                    '<span><a href="https://github.com/scriptiot/evm" target="_blank"> EVM </a></span>',
+                    '<span>Powered By <a href="https://github.com/QingWei-Li/docsify" target="_blank">docsify</a>.</span>',
+                    '</footer>'
+                ].join('');
+
+                hook.afterEach(function(html) {
+                    return html + footer
+                })
+            }
+        ],
+        toc: {
+            scope: '.markdown-section',
+            headings: 'h1, h2, h3, h4, h5, h6',
+            title: '',
+        },
+    }
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-javascript.min.js"></script>
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    const gitalk = new Gitalk({
+        clientID: 'Github Application Client ID',
+        clientSecret: 'Github Application Client Secret',
+        repo: 'Github repo',
+        owner: 'Github repo owner',
+        admin: ['Github repo collaborators, only these guys can initialize github issues'],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
+    </script>
 </body>
+
 </html>

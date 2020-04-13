@@ -4,7 +4,7 @@ RTC是一个独立的时钟驱动，用于记录系统时间。
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var rtc = new m.RTC();
 rtc.datetime((2020, 4, 3, 5, 13, 0, 0, 0));
