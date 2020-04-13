@@ -39,3 +39,7 @@
   * [Pin Class](zh-cn/evm_class_pin.md)
   * [RTC Class](zh-cn/evm_class_rtc.md)
   * [Switch Class](zh-cn/evm_class_switch.md)
+  * [Timer Class](zh-cn/evm_class_timer.md)  
+  * [E53SC1 Class](zh-cn/evm_class_e53sc1.md)  
+  * [E53SF1 Class](zh-cn/evm_class_e53sf1.md)
+  * [E53ST1 Class](zh-cn/evm_class_e53st1.md)
