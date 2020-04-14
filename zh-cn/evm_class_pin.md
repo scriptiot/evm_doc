@@ -4,7 +4,7 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 
 ### 构造函数
 
-` class evm.Pin(port, pin, mode) `
+` class evm.Pin(port, pin, mode, pull) `
 
  创建一个Pin对象：
 *  port，引脚所在的端口。对于stm32芯片，可以使用如下几个默认的端口：
@@ -17,12 +17,13 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
     *  Pin.IN
     *  Pin.OUT_OD
     *  Pin.OUT_PP
+* pull，芯片上下拉方式：
     *  Pin.PULL_DOWN
     *  Pin.PULL_NONE
     *  Pin.PULL_UP
 
 同时，也可以这样创建一个Pin对象：
-    `pin = evm.Pin('GPIOB', 1, 'OUT_OD')`
+    `pin = evm.Pin('GPIOB', 1, 'OUT_OD', 'PULL_UP')`
     
     
 ### 对象函数
@@ -38,7 +39,7 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 
 ```javascript
 var m = require('evm');
-var pin = new m.Pin(m.Pin.GPIOB, 5, m.Pin.OUT_PP);
+var pin = new m.Pin(m.Pin.GPIOB, 5, m.Pin.OUT_PP,m.Pin.PULL_UP);
 pin.value(0);
 print(pin.value());
 ```
