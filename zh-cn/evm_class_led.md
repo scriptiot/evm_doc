@@ -32,14 +32,13 @@ LED灯在打开和关闭之前切换。
 
 ```javascript
 var m = require('evm');
-var led = m.LED(1);
+var led = m.LED(0);
 led.on();
 led.off();
 led.toggle();
-led.intensity(100);
-print( led.intensity() );
+led.toggle();
 ```
-<video src="http://47.105.117.50:12306/djf/evm_doc_publish/raw/master/zh-cn/vedio/led.mp4?inline=false" width="600" height="480"
+<video src="http://47.105.117.50:12306/djf/evm_doc_publish/raw/master/zh-cn/vedio/led.mp4?inline=false" 
 controls="controls"></video> 
 
 
