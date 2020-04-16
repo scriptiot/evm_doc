@@ -30,8 +30,6 @@
 
 * iot库evm之外设控制
   * [ADC Class](zh-cn/evm_class_adc.md)
-    * [ADC1 Class](zh-cn/evm_class_adc.md)
-    * [ADC2 Class](zh-cn/evm_class_adc.md)
   * [DAC Class](zh-cn/evm_class_dac.md)
   * [Flash Class](zh-cn/evm_class_flash.md)
   * [LCD Class](zh-cn/evm_class_lcd.md)
