@@ -23,6 +23,6 @@
 ```javascript
 var m= require('evm')
 function tt(){print('timer');}
-var timer = m.Timer(0,7999,999)
+var timer =new m.Timer(0,7999,999)
 timer.callback(tt)
 ```
