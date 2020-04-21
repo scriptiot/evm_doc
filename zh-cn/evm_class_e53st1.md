@@ -25,7 +25,7 @@
 ```javascript
 var m = require('evm')
 var st = new m.E53ST1()
-st.loghton()
+st.lighton()
 st.lightoff()
 st.beepon()
 st.beepoff()

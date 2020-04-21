@@ -18,7 +18,7 @@
 ### 使用方法
 ```javascript
 var m = require('evm')
-var el = new m.E32SC1()
+var el = new m.E53SC1()
 el.lighton()
 el.lux()
 el.lightoff()
