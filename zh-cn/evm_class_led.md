@@ -32,7 +32,7 @@ LED灯在打开和关闭之前切换。
 
 ```javascript
 var m = require('evm');
-var led = m.LED(0);
+var led =new m.LED(0);
 led.on();
 led.off();
 led.toggle();
