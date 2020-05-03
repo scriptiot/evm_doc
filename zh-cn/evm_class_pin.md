@@ -4,26 +4,34 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 
 ### 构造函数
 
-` class evm.Pin(port, pin, mode, pull) `
+` class evm.Pin(name, pin, flags) `
 
  创建一个Pin对象：
-*  port，引脚所在的端口。对于stm32芯片，可以使用如下几个默认的端口：
-    *  Pin.GPIOA, Pin.GPIOB, Pin.GPIOC, Pin.GPIOD, Pin.GPIOE, Pin.GPIOF, Pin.GPIOG
-*  pin，引脚号。对于stm32，引脚号通常为0 - 15.
-*  mode，芯片输入输出模式。对于stm32芯片， 可以使用如下默认设置：
-    *  Pin.AF_OD
-    *  Pin.AF_PP
-    *  Pin.ANALOG
-    *  Pin.IN
-    *  Pin.OUT_OD
-    *  Pin.OUT_PP
-* pull，芯片上下拉方式：
-    *  Pin.PULL_DOWN
-    *  Pin.PULL_NONE
-    *  Pin.PULL_UP
+*  name，引脚所在的端口名称。相对大多数芯片，端口名称格式一般为 GPIOX，例如：
+    *  GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG
+    *  由于芯片引脚数的差异，并非所有端口名称都能使用。具体可参考芯片手册说明。
+*  pin，引脚号。引脚号通常为0 - 15.
+*  flags，引脚配置参数，可以通过 xxx|xxx 方式进行组合配置：
+    *  Pin.IN, 输入
+    *  Pin.OUT，输出
+    *  Pin.DISCONNECTED，取消配置、引脚悬空
+    *  Pin.INT_ENABLE，使能外部中断
+    *  Pin.INT_DISABLE，关闭外部中断
+    *  Pin.INT_EDGE_RISING，外部中断边缘上升触发
+    *  Pin.INT_EDGE_FALLING，外部中断边缘下降触发
+    *  Pin.INT_EDGE_BOTH，外部中断边缘上升、下降均触发
+    *  Pin.PULL_UP，上拉模式
+    *  Pin.PULL_DOWN，下拉模式
+    *  Pin.OPEN_SOURCE，开源极模式
+    *  Pin.OPEN_DRAIN，开漏极模式
 
-同时，也可以这样创建一个Pin对象：
-    `pin = evm.Pin('GPIOB', 1, 'OUT_OD', 'PULL_UP')`
+
+创建对象例子：
+    
+    ```
+    m = require('evm')
+    pin = new m.Pin('GPIOC', 13, m.OUT)
+    ```
     
     
 ### 对象函数
@@ -38,8 +46,8 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 ### 使用方法
 
 ```javascript
-var m = require('evm');
-var pin = new m.Pin(m.Pin.GPIOB, 5, m.Pin.OUT_PP,m.Pin.PULL_UP);
+m = require('evm')
+pin = new m.Pin('GPIOC', 13, m.OUT)
 pin.value(0);
 print(pin.value());
 ```
