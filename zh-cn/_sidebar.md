@@ -3,6 +3,37 @@
   * [EVM是什么](zh-cn/evm_what.md)
   * [EVM目录结构](zh-cn/evm_architecture.md)
 
+* 基于EVM和Zephyr玩转IOT开发
+
+  * [Zephyr是什么](zh-cn/zephyr.md)
+  * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
+  * [evm-tools编译工具链windows一键安装](zh-cn/evm_tools_windows.md)
+  * [evm-tools编译工具链Linux一键安装](zh-cn/evm_tools_linux.md)
+  * [west 命令简介](zh-cn/zephyr_west.md)
+  * [基于EVM和Zephyr开发板适配指南](zh-cn/evm_zephyr_boards.md)
+
+* EVM驱动与外设模块
+  * [EVM驱动与外设模块简介](zh-cn/evm_drivers_module.md)
+  * [ADC Class](zh-cn/evm_class_adc.md)
+  * [DAC Class](zh-cn/evm_class_dac.md)
+  * [Flash Class](zh-cn/evm_class_flash.md)
+  * [LCD Class](zh-cn/evm_class_lcd.md)
+  * [LED Class](zh-cn/evm_class_led.md)
+  * [Pin Class](zh-cn/evm_class_pin.md)
+  * [RTC Class](zh-cn/evm_class_rtc.md)
+  * [Switch Class](zh-cn/evm_class_switch.md)
+
+* 虚拟机启动适配指南
+
+  * [基于evm的lib库简介](zh-cn/evm_lib.md)
+  * [虚拟机启动main.c解析](zh-cn/evm_main.md)
+  * [x86平台快速编译构建体验](zh-cn/evm_build.md)
+
+* 虚拟机标准扩展模块指南
+
+  * [扩展模块简介](zh-cn/evm_module.md)
+  * [如何使用扩展模块API](zh-cn/evm_module_api.md)
+
 * EVM API文档
 
   * [基础数据结构](zh-cn/evm_data_structure.md)
@@ -16,28 +47,3 @@
   * [虚拟机数组或列表(List)对象API](zh-cn/evm_basic_apis_list.md)
   * [虚拟机object或dict对象API](zh-cn/evm_basic_apis_dict.md)
   * [虚拟机模块创建API](zh-cn/evm_basic_apis_native.md)
-
-* 虚拟机启动适配指南
-
-  * [基于evm的lib库简介](zh-cn/evm_lib.md)
-  * [虚拟机启动main.c解析](zh-cn/evm_main.md)
-  * [x86平台快速编译构建体验](zh-cn/evm_build.md)
-
-* 虚拟机标准扩展模块指南
-
-  * [扩展模块简介](zh-cn/evm_module.md)
-  * [如何使用扩展模块API](zh-cn/evm_module_api.md)
-
-* iot库evm之外设控制
-  * [ADC Class](zh-cn/evm_class_adc.md)
-  * [DAC Class](zh-cn/evm_class_dac.md)
-  * [Flash Class](zh-cn/evm_class_flash.md)
-  * [LCD Class](zh-cn/evm_class_lcd.md)
-  * [LED Class](zh-cn/evm_class_led.md)
-  * [Pin Class](zh-cn/evm_class_pin.md)
-  * [RTC Class](zh-cn/evm_class_rtc.md)
-  * [Switch Class](zh-cn/evm_class_switch.md)
-  * [Timer Class](zh-cn/evm_class_timer.md)  
-  * [E53SC1 Class](zh-cn/evm_class_e53sc1.md)  
-  * [E53SF1 Class](zh-cn/evm_class_e53sf1.md)
-  * [E53ST1 Class](zh-cn/evm_class_e53st1.md)
