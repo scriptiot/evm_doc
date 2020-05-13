@@ -4,10 +4,10 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
 
 ### 构造函数
 
-` class evm.Pin(name, pin, flags) `
+` class evm.Pin(label, pin, flags) `
 
  创建一个Pin对象：
-*  name，引脚所在的端口名称。相对大多数芯片，端口名称格式一般为 GPIOX，例如：
+*  label GPIOX，例如：
     *  GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG
     *  由于芯片引脚数的差异，并非所有端口名称都能使用。具体可参考芯片手册说明。
 *  pin，引脚号。引脚号通常为0 - 15.
@@ -26,12 +26,18 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
     *  Pin.OPEN_DRAIN，开漏极模式
 
 
+`Pin.value(value)`
+获取或者设置引脚的状态，亮度范围是0-255。0表示低电平，其它表示高电平。
+如果函数没有参数设置，表示读取引脚电平。
+
 创建对象例子：
     
-    ```
-    m = require('evm')
-    pin = new m.Pin('GPIOC', 13, m.OUT)
-    ```
+```javascript
+var m = require('evm')
+var pin = new m.Pin('GPIOC', 13, m.Pin.OUT)
+pin.value(1)
+pin.value()
+```
     
     
 ### 对象函数
