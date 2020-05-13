@@ -22,39 +22,39 @@
 
 
 
-+ 编译程序
+### 3.1 编译程序
 
-    + 命令
++ 命令
 ```sh
     west build -b BOARD -d BUILD_DIR
 ```
-    + 举例
++ 举例
 ```sh       
     west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/bearpi_stm32l431 
 ```
 
-+ 清空编译中间文件
+### 3.2 清空编译中间文件
 
-    + 命令
++ 命令
 ```sh
     west build -b BOARD -d BUILD_DIR -t clean
 ```
-    + 举例 
++ 举例 
 ```sh
     west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/bearpi_stm32l431 -t clean
 ```
-+ 烧写程序
+### 3.3 烧写程序
 
-    + 命令
++ 命令
 ```sh
     west flash -d BUILD_DIR
 ```
-    + 举例
++ 举例
 ```sh
     west flash -d build/bearpi_stm32l431/bearpi_stm32l431/ 
 ```
 
-+ 调试程序
+### 3.4 调试程序
    + 命令
 ```sh
     west debug -d BUILD_DIR
