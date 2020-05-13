@@ -4,9 +4,10 @@
 
 ### 构造函数
 
-` class evm.DAC(id) `
+` class evm.DAC(label,channel)`
 
- 创建一个DAC对象，并指定id编号。小熊派支持一个DAC， 即编号为1.如果构造函数不指定编号，则表示使用编号1的DAC。
+ 创建一个DAC对象，并指定编号,通道。
+ 小熊派开发板支持1个DAC引脚（DAC1_OUT2）,默认编号为label = "DAC_1",channel = 2。
 
     
     
@@ -21,7 +22,7 @@
 
 ```javascript
 var m = require('evm');
-var dac new m.DAC();
+var dac new m.DAC("DAC_1",2);
 dac.write(1000);
 ```
 
