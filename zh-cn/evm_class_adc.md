@@ -4,10 +4,10 @@
 
 ### 构造函数
 
-` class evm.ADC(id) `
+` class evm.ADC(label,channel) `
 
- 创建一个ADC对象，并指定id编号。小熊派开发板支持1个ADC引脚（ADC0_IN12）,默认编号为1。
- 在创建对象时如果不指定id，则默认使用编号1.
+ 创建一个ADC对象，并指定编号,通道。
+ 小熊派开发板支持1个ADC引脚（ADC1_IN3）,默认编号为label = "ADC_1",channel = 3。
 
     
     
@@ -22,7 +22,7 @@
 
 ```javascript
 var m = require('evm');
-var adc = new m.ADC();
+var adc = new m.ADC("ADC_1",3);
 print(adc.read())
 ```
 
