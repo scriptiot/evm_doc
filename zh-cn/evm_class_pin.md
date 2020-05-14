@@ -25,6 +25,7 @@ Pin对象用来控制芯片的IO引脚。通过Pin对象可以设置IO引脚的�
     *  Pin.OPEN_SOURCE，开源极模式
     *  Pin.OPEN_DRAIN，开漏极模式
 
+### 对象函数
 
 `Pin.value(value)`
 获取或者设置引脚的状态，亮度范围是0-255。0表示低电平，其它表示高电平。
@@ -38,23 +39,5 @@ var pin = new m.Pin('GPIOC', 13, m.Pin.OUT)
 pin.value(1)
 pin.value()
 ```
-    
-    
-### 对象函数
 
-`Pin.value(value)`
-
-获取或者设置引脚的电平：
-*  没有参数时，返回引脚的电平值0或者1.
-*  参数为0或者false时，引脚输出低电平。参数为大于0或者true时，输出高电平。
-
-
-### 使用方法
-
-```javascript
-m = require('evm')
-pin = new m.Pin('GPIOC', 13, m.OUT)
-pin.value(0);
-print(pin.value());
-```
 
