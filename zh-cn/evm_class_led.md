@@ -7,7 +7,7 @@ LED对象是用来控制开发板的LED灯（发光二极管）。
 ` class evm.LED(id) `
 
  创建一个LED对象：
-*  id为LED编号（小熊派开发板上有一个LED灯，id编号为0）。
+*  id为LED编号（小熊派开发板上有一个LED灯，id编号为0或者LED0）。
     
     
 ### 对象函数
