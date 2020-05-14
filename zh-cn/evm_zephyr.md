@@ -1,6 +1,6 @@
 ## 1. 基于Zephyr快速体验EVM
 
-bsp目录中有一个**`qemu_cortex_m3`**的项目，用户可以快速的基于Zephyr构建cortex_m3的项目进行体验，并使用qemu进行模拟运行。
+bsp目录中有一个**`qemu_cortex_m3`**的项目，用户可以快速的基于 **`Zephyr`** 构建 **`cortex_m3`** 的项目进行体验，并使用qemu进行模拟运行。
 
 ## 2. 编译qemu_cortex_m3
 

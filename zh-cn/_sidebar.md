@@ -6,10 +6,10 @@
 * 基于EVM和Zephyr玩转IOT开发
 
   * [Zephyr是什么](zh-cn/zephyr.md)
-  * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
   * [evm-tools编译工具链windows一键安装](zh-cn/evm_tools_windows.md)
   * [evm-tools编译工具链Linux一键安装](zh-cn/evm_tools_linux.md)
   * [west 命令简介](zh-cn/zephyr_west.md)
+  * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
   * [基于EVM和Zephyr开发板适配指南](zh-cn/evm_zephyr_boards.md)
 
 * EVM驱动与外设模块
