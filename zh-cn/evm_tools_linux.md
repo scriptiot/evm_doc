@@ -50,14 +50,15 @@ cd tools
 
 ## 3. 编译体验
 
-+ 根据指定的board芯片类型进行编译
+
++ 使用qemu_cortex_m3模拟构建EVM
 
 ```
-west build -b bearpi_stm32l431 bsp/stm32/bearpi_stm32l431
+west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d build/qemu_cortex_m3/ejs
 ```
 
-+ 烧写程序
++ 运行程序
 
 ```
-west build -t run
+west build -t run -d build/qemu_cortex_m3/ejs
 ```
