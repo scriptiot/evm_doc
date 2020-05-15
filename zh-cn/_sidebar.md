@@ -23,12 +23,6 @@
   * [RTC Class](zh-cn/evm_class_rtc.md)
   * [Switch Class](zh-cn/evm_class_switch.md)
 
-* 虚拟机启动适配指南
-
-  * [基于evm的lib库简介](zh-cn/evm_lib.md)
-  * [虚拟机启动main.c解析](zh-cn/evm_main.md)
-  * [x86平台快速编译构建体验](zh-cn/evm_build.md)
-
 * 虚拟机标准扩展模块指南
 
   * [扩展模块简介](zh-cn/evm_module.md)
