@@ -41,3 +41,8 @@
   * [虚拟机数组或列表(List)对象API](zh-cn/evm_basic_apis_list.md)
   * [虚拟机object或dict对象API](zh-cn/evm_basic_apis_dict.md)
   * [虚拟机模块创建API](zh-cn/evm_basic_apis_native.md)
+
+* EVM 版本记录
+
+  * [v1.0](zh-cn/evm_v1.0.md)
+
