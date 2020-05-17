@@ -24,7 +24,13 @@
 
 ## 4. 下载evm-tools
 
-+ 解压到任意目录
++ 下载地址
+
+  + 链接：https://pan.baidu.com/s/1Ft_kpTs-2BsgU2uPA4Y9pQ 
+  + 提取码：mnx1
+
+
++ 7z解压到用户指定的目录
 
 ## 5. 一键安装EVM开发环境
 
