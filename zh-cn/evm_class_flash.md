@@ -4,7 +4,7 @@ Flash对象可以访问小熊派开发板上的SPI驱动的Flash闪存。
 
 ### 构造函数
 
-` class evm.Pin(port, pin, mode) `
+` class evm.FLASH(label) `
 
  创建一个 Flash对象，并初始化Flash驱动。
     

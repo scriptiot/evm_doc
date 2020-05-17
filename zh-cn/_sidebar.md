@@ -20,8 +20,10 @@
   * [LCD Class](zh-cn/evm_class_lcd.md)
   * [LED Class](zh-cn/evm_class_led.md)
   * [Pin Class](zh-cn/evm_class_pin.md)
-  * [RTC Class](zh-cn/evm_class_rtc.md)
+  <!-- * [RTC Class](zh-cn/evm_class_rtc.md) -->
   * [Switch Class](zh-cn/evm_class_switch.md)
+  * [Watchdog Class](zh-cn/evm_class_watchdog.md)
+
 
 * 虚拟机启动适配指南
 
