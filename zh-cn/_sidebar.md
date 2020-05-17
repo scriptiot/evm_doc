@@ -23,6 +23,8 @@
   <!-- * [RTC Class](zh-cn/evm_class_rtc.md) -->
   * [Switch Class](zh-cn/evm_class_switch.md)
   * [Watchdog Class](zh-cn/evm_class_watchdog.md)
+  * [Timer Class](zh-cn/evm_class_timer.md)
+
 
 
 * 虚拟机标准扩展模块指南
