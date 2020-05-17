@@ -2,6 +2,8 @@
 
  **`EVM`** 全称 `Embedded Virtural Machine`，本质上是一款通用、精简的嵌入式虚拟机，由语法解析前端框架和字节码运行后端构成，可运行在资源受限制的单片机上。
 
+![evm](./image/evm.png)
+
 ## 2. 更新内容
 
 + 增加对Zephyr（Linux基金会旗下开源RTOS）全面支持
@@ -46,3 +48,20 @@
 ![evm](./image/QQ.jpg)
 
 ---
+
+## 8. 贡献代码
+
++ 在您自己的GitHub账户下Fork **`EVM`** 开源项目；
++ 根据您的需求在本地clone 一份 **`EVM`** 代码；
++ 您修改或者新增功能后，push 到您fork的远程分支；
++ 创建 pull request，向 **`EVM`** 官方开发分支提交合入请求；
++ **`EVM`** 研发团队会定期review代码，通过测试后合入。
+
+
+
+## 9、联系我们
+========================================
++ 论坛： [EVM官方技术交流论坛](http://47.105.117.50/discuzx/upload/)
++ 邮箱： scriptiot@aliyun.com
+
+欢迎大家通过 `GitHub issues`、`邮件` `论坛` 或 `QQ群`反馈问题和联系我们。
