@@ -10,7 +10,7 @@
 + 增加一键开发环境配置脚本evm.sh，支持windows和Linux；
 + 增加windows平台编译构建调试工具链evm-tools;
 + 增加REPL在线调试程序支持
-+ 增加物联网驱动模块evm,支持adc、adc、flash、gpio、lcd、pwd、sys、timer、uart、watchdog等驱动；
++ 增加物联网驱动模块evm,支持adc、adc、flash、gpio、lcd、pwm、sys、timer、uart、watchdog等驱动；
 + 增加ecma支持，支持Object、array、string、number、math、regexp；
 + 增加EVM在线帮助手册
 + 增加小熊派stm32l431开发板支持
@@ -21,7 +21,10 @@
 
 ## 3. 下个版本更新计划
 
-+ 发布python语言
++ 完善EVM对zephyr的驱动支持
++ 完善ecma设计
++ 发布python3语言
++ 增加华为云组件
 
 
 ## 4. EVM在线帮助手册
