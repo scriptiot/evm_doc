@@ -24,6 +24,8 @@
   * [Switch Class](zh-cn/evm_class_switch.md)
   * [Watchdog Class](zh-cn/evm_class_watchdog.md)
   * [Timer Class](zh-cn/evm_class_timer.md)
+  * [UART Class](zh-cn/evm_class_uart.md)
+
 
 
 

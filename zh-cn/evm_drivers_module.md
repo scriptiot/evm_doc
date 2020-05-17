@@ -10,5 +10,6 @@
 ` Switch `
 ` Timer `
 ` Watchdog `
+` UART `
 
 
