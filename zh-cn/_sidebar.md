@@ -6,10 +6,10 @@
 * 基于EVM和Zephyr玩转IOT开发
 
   * [Zephyr是什么](zh-cn/zephyr.md)
-  * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
   * [evm-tools编译工具链windows一键安装](zh-cn/evm_tools_windows.md)
   * [evm-tools编译工具链Linux一键安装](zh-cn/evm_tools_linux.md)
   * [west 命令简介](zh-cn/zephyr_west.md)
+  * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
   * [基于EVM和Zephyr开发板适配指南](zh-cn/evm_zephyr_boards.md)
 
 * EVM驱动与外设模块
@@ -24,12 +24,6 @@
   * [Switch Class](zh-cn/evm_class_switch.md)
   * [Watchdog Class](zh-cn/evm_class_watchdog.md)
 
-
-* 虚拟机启动适配指南
-
-  * [基于evm的lib库简介](zh-cn/evm_lib.md)
-  * [虚拟机启动main.c解析](zh-cn/evm_main.md)
-  * [x86平台快速编译构建体验](zh-cn/evm_build.md)
 
 * 虚拟机标准扩展模块指南
 
@@ -49,3 +43,8 @@
   * [虚拟机数组或列表(List)对象API](zh-cn/evm_basic_apis_list.md)
   * [虚拟机object或dict对象API](zh-cn/evm_basic_apis_dict.md)
   * [虚拟机模块创建API](zh-cn/evm_basic_apis_native.md)
+
+* EVM 版本记录
+
+  * [v1.0](zh-cn/evm_v1.0.md)
+
