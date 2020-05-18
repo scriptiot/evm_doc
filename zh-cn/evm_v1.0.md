@@ -9,8 +9,8 @@
 + 增加对Zephyr（Linux基金会旗下开源RTOS）全面支持
 + 增加一键开发环境配置脚本evm.sh，支持windows和Linux；
 + 增加windows平台编译构建调试工具链evm-tools;
-+ 增加REPL在线调试程序支持
-+ 增加物联网驱动模块evm,支持adc、adc、flash、gpio、lcd、pwm、sys、timer、uart、watchdog等驱动；
++ 增加REPL在线调试程序支持a
++ 增加物联网驱动模块evm,支持adc、dac、flash、gpio、lcd、pwm、sys、timer、uart、watchdog等驱动；
 + 增加ecma支持，支持Object、array、string、number、math、regexp；
 + 增加EVM在线帮助手册
 + 增加小熊派stm32l431开发板支持
