@@ -2,10 +2,14 @@
 
 + 下载最新版本的zephyr-sdk:
 
-```sh
-cd ~
-wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.2/zephyr-sdk-0.11.2-setup.run
-```
+    + github用户
+        ```sh
+        cd ~
+        wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.2/zephyr-sdk-0.11.2-setup.run
+        ```
+    + 国内用户可以使用百度云盘下载
+        + 链接：`https://pan.baidu.com/s/1zMU0MhU03ZGqcVBUifsMWA`
+        + 提取码：`nftx `
 
 + 运行installer, 安装 SDK 到 ~/zephyr-sdk-0.11.2:
 
