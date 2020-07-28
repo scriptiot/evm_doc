@@ -4,7 +4,7 @@ Switch对象对应的是开发板上的按键。小熊派开发板有两个用�
 
 ### 使用方法
 
-```
+```javascript
 var m = require('evm');
 var sw = new m.Switch(1);
 print(sw.value());
@@ -29,7 +29,3 @@ sw.callback(test);
 `Switch.callback(function)`
 
 按键注册回调函数。当按键按下后，执行回调函数。如果function为null，则表示注销回调函数。
-
-
-
-

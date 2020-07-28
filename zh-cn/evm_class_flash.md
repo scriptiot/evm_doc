@@ -25,5 +25,3 @@ Flash对象可以访问小熊派开发板上的SPI驱动的Flash闪存。
 *  address， 起始地址
 *  buf，字节数组
 *  size，要写入的数据大小
-
-

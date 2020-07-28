@@ -25,7 +25,9 @@
   * [Watchdog Class](zh-cn/evm_class_watchdog.md)
   * [Timer Class](zh-cn/evm_class_timer.md)
   * [UART Class](zh-cn/evm_class_uart.md)
-  * [Socket Class](zh-cn/evm_class_socket.md)
+
+
+
 
 * 虚拟机标准扩展模块指南
 

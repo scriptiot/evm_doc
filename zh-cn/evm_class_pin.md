@@ -39,5 +39,3 @@ var pin = new m.Pin('GPIOC', 13, m.Pin.OUT)
 pin.value(1)
 pin.value()
 ```
-
-

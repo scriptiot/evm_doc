@@ -25,4 +25,3 @@ var m = require('evm');
 var adc = new m.ADC("ADC_1",3);
 print(adc.read())
 ```
-

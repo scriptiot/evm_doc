@@ -29,8 +29,4 @@ led.on();
 led.off();
 
 ```
-<video src="http://47.105.117.50:12306/djf/evm_doc_publish/raw/master/zh-cn/vedio/led.mp4?inline=false" 
-controls="controls"></video> 
-
-
-
+<video src="https://evmiot.com/uploads/led.mp4" controls="controls"></video>

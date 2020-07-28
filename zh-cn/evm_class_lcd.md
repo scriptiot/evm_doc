@@ -70,7 +70,3 @@
 ` LCD.set_background_color(rgb)`
 
 设置 背景颜色，rgb值为RGB565格式
-
-
-
-
