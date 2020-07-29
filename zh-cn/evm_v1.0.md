@@ -64,7 +64,7 @@
 
 ## 9、联系我们
 ========================================
-+ 论坛： [EVM官方技术交流论坛](http://47.105.117.50/discuzx/upload/)
++ 论坛： [EVM官方技术交流论坛](http://forum.evmiot.com/)
 + 邮箱： scriptiot@aliyun.com
 
 欢迎大家通过 `GitHub issues`、`邮件` `论坛` 或 `QQ群`反馈问题和联系我们。
