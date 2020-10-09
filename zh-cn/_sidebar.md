@@ -3,6 +3,12 @@
   * [EVM是什么](zh-cn/evm_what.md)
   * [EVM目录结构](zh-cn/evm_architecture.md)
 
+* 鸿蒙OS + EVM
+  <!-- * [什么是物联网虚拟机](zh-cn/evm_what.md)
+  * [鸿蒙OS的js框架解读](zh-cn/evm_what.md) -->
+  * [**EVM** 运行性能测评](zh-cn/evm_hmos_performance.md)
+  * [**EVM** 资源占用测评 ](zh-cn/evm_hmos_flashsram.md)
+
 * 基于EVM和Zephyr玩转IOT开发
 
   * [Zephyr是什么](zh-cn/zephyr.md)
