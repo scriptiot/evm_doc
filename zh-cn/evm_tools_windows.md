@@ -56,7 +56,8 @@ cd tools
 + 根据指定的board芯片类型进行编译
 
 ```
-west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d build/qemu_cortex_m3/ejs
+west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d \
+build/qemu_cortex_m3/ejs
 ```
 
 + 运行程序

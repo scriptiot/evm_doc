@@ -5,7 +5,8 @@ bsp目录中有一个**`qemu_cortex_m3`**的项目，用户可以快速的基于
 ## 2. 编译qemu_cortex_m3
 
 ```sh
-west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d build/qemu_cortex_m3/ejs
+west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d \
+build/qemu_cortex_m3/ejs
 ```
 
 + `-b` 指定board

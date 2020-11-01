@@ -4,15 +4,15 @@
 
 ## 2. west命令简介
 
-| 子命令      |   含义 | 
+| 子命令      |   含义 |
 | :-------- | :--------|
-| init  | 初始化west工作空间 | 
+| init  | 初始化west工作空间 |
 | update  | 更新west.yml中的模块|
 | list  | zephyr模块列表 |
-| help  | 帮助 | 
+| help  | 帮助 |
 | config  | 配置读取和设置 |
 | topdir  | 显示west工作空间目录 |
-| boards  | 支持的boards | 
+| boards  | 支持的boards |
 | build  | 编译程序 |
 | flash  | 烧录程序 |
 | debug  | 调试程序 |
@@ -30,7 +30,8 @@
 ```
 + 举例
 ```sh       
-    west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/bearpi_stm32l431 
+    west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/\
+    bearpi_stm32l431 
 ```
 
 ### 3.2 清空编译中间文件
@@ -41,7 +42,8 @@
 ```
 + 举例 
 ```sh
-    west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/bearpi_stm32l431 -t clean
+    west build -b bearpi_stm32l431 -d build/bearpi_stm32l431/\
+    bearpi_stm32l431 -t clean
 ```
 ### 3.3 烧写程序
 

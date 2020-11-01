@@ -5,7 +5,8 @@
     + github用户
         ```sh
         cd ~
-        wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.2/zephyr-sdk-0.11.2-setup.run
+        wget https://github.com/zephyrproject-rtos/sdk-ng/releases\
+        /download/v0.11.2/zephyr-sdk-0.11.2-setup.run
         ```
     + 国内用户可以使用百度云盘下载
         + 链接：`https://pan.baidu.com/s/1zMU0MhU03ZGqcVBUifsMWA`
@@ -35,7 +36,8 @@ export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
 + 安装 udev rules, 方便flash绝大多数Zephyr boards:
 
 ```sh
-sudo cp ${ZEPHYR_SDK_INSTALL_DIR}/sysroots/x86_64-pokysdk-linux/usr/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
+sudo cp ${ZEPHYR_SDK_INSTALL_DIR}/sysroots/x86_64-pokysdk-\
+linux/usr/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
 
 sudo udevadm control --reload
 ```
@@ -58,7 +60,8 @@ cd tools
 + 使用qemu_cortex_m3模拟构建EVM
 
 ```
-west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d build/qemu_cortex_m3/ejs
+west build -b qemu_cortex_m3 bsp/qemu_cortex_m3/ejs -d \
+build/qemu_cortex_m3/ejs
 ```
 
 + 运行程序

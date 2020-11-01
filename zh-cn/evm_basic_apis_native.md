@@ -13,7 +13,8 @@
  * @param v，函数参数指针
  * @return 内置函数对象
  */
-typedef evm_val_t (*evm_native_fn)(void * e, evm_val_t * self, int vc, evm_val_t * v);
+typedef evm_val_t (*evm_native_fn)(void * e, evm_val_t * self, 
+                                   int vc, evm_val_t * v);
 ```
 
 
@@ -40,7 +41,8 @@ evm_val_t evm_mk_native(intptr_t n)
  * @param attr_len，属性长度
  * @return 内置函数对象
  */
-evm_val_t *evm_native_function_create(evm_t *e, evm_native_fn fn, int attr_len);
+evm_val_t *evm_native_function_create(evm_t *e, evm_native_fn fn, 
+                                      int attr_len);
 
 ```
 

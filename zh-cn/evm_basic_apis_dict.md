@@ -77,7 +77,8 @@ evm_val_t * evm_prop_get(evm_t *e, evm_val_t * o, const char* key, int depth);
  * @param depth，depth大于0表示查找范围包括父类，否则不包括父类
  * @return 成员，查找失败则返回undefined
  */
-evm_val_t * evm_prop_get_by_key(evm_t * e, evm_val_t *obj, uint32_t key, int depth);
+evm_val_t * evm_prop_get_by_key(evm_t * e, evm_val_t *obj, 
+                                uint32_t key, int depth);
 ```
 
 ### 8.6 通过索引位置获取对象成员
@@ -105,7 +106,8 @@ evm_val_t * evm_prop_get_by_index(evm_t * e, evm_val_t * o, int index);
  * @param v，成员值
  * @return 正确返回ec_ok，错误返回ec_index
  */
-evm_err_t evm_prop_set(evm_t * e, evm_val_t * o, uint32_t index, const char *key, evm_val_t v);
+evm_err_t evm_prop_set(evm_t * e, evm_val_t * o, uint32_t index, 
+                       const char *key, evm_val_t v);
 ```
 
 ### 8.7 通过索引index，设置对象成员的key和value
@@ -120,7 +122,8 @@ evm_err_t evm_prop_set(evm_t * e, evm_val_t * o, uint32_t index, const char *key
  * @param v，成员值
  * @return 正确返回ec_ok，错误返回ec_index
  */
-evm_err_t evm_prop_set_key_value(evm_t * e, evm_val_t * o, uint32_t index, uint16_t key, evm_val_t v);
+evm_err_t evm_prop_set_key_value(evm_t * e, evm_val_t * o, uint32_t index, 
+                                 uint16_t key, evm_val_t v);
 ```
 
 ### 8.8 通过对象名称设置对象成员
@@ -134,7 +137,8 @@ evm_err_t evm_prop_set_key_value(evm_t * e, evm_val_t * o, uint32_t index, uint1
  * @param v，成员值
  * @return 正确返回ec_ok，错误返回ec_key
  */
-evm_err_t evm_prop_set_value(evm_t * e, evm_val_t * o, const char* key, evm_val_t v);
+evm_err_t evm_prop_set_value(evm_t * e, evm_val_t * o, 
+                             const char* key, evm_val_t v);
 ```
 
 ### 8.9 通过对象名称追加对象成员
@@ -162,7 +166,8 @@ evm_err_t evm_prop_append(evm_t * e, evm_val_t * o, char * key, evm_val_t * v);
  * @param v，值
  * @return 错误码
  */
-evm_err_t evm_prop_append_with_key(evm_t * e, evm_val_t * o, int key, evm_val_t * v);
+evm_err_t evm_prop_append_with_key(evm_t * e, evm_val_t * o, int key, 
+                                   evm_val_t * v);
 ```
 
 ### 8.11 通过索引设置成员值
@@ -176,7 +181,8 @@ evm_err_t evm_prop_append_with_key(evm_t * e, evm_val_t * o, int key, evm_val_t 
  * @param v，值
  * @return 错误码
  */
-evm_err_t evm_prop_set_value_by_index(evm_t * e, evm_val_t *o, uint32_t index, evm_val_t v);
+evm_err_t evm_prop_set_value_by_index(evm_t * e, evm_val_t *o, 
+                                      uint32_t index, evm_val_t v);
 ```
 
 ### 8.12 通过索引设置成员值
@@ -201,7 +207,8 @@ uint32_t evm_prop_get_key_by_index(evm_t * e, evm_val_t * o, int index);
  * @param index，索引
  * @param key，字符串索引值
  */
-void evm_prop_set_key_by_index(evm_t * e, evm_val_t * o, int index, uint32_t key);
+void evm_prop_set_key_by_index(evm_t * e, evm_val_t * o, int index, 
+                               uint32_t key);
 ```
 ### 8.14 获取对象成员个数长度
 

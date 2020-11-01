@@ -42,5 +42,6 @@ int evm_buffer_len(evm_val_t * o);
  * @param buffer，写入内容缓存数组
  * @return 虚拟机错误码
  */
-evm_err_t evm_buffer_set(evm_val_t * o, uint8_t * buffer, uint32_t index, uint32_t len);
+evm_err_t evm_buffer_set(evm_val_t * o, uint8_t * buffer, 
+                         uint32_t index, uint32_t len);
 ```

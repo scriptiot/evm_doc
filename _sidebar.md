@@ -1,10 +1,8 @@
 * EVM简介
-
   * [EVM是什么](zh-cn/evm_what.md)
   * [EVM目录结构](zh-cn/evm_architecture.md)
 
 * 基于EVM和Zephyr玩转IOT开发
-
   * [Zephyr是什么](zh-cn/zephyr.md)
   * [evm-tools编译工具链windows一键安装](zh-cn/evm_tools_windows.md)
   * [evm-tools编译工具链Linux一键安装](zh-cn/evm_tools_linux.md)
