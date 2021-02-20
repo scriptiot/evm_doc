@@ -18,20 +18,29 @@
   * [基于Zephyr快速体验EVM](zh-cn/evm_zephyr.md)
   * [基于EVM和Zephyr开发板适配指南](zh-cn/evm_zephyr_boards.md)
 
-* EVM驱动与外设模块
-  * [EVM驱动与外设模块简介](zh-cn/evm_drivers_module.md)
-  * [ADC Class](zh-cn/evm_class_adc.md)
-  * [DAC Class](zh-cn/evm_class_dac.md)
-  * [Flash Class](zh-cn/evm_class_flash.md)
-  * [LCD Class](zh-cn/evm_class_lcd.md)
-  * [LED Class](zh-cn/evm_class_led.md)
-  * [Pin Class](zh-cn/evm_class_pin.md)
-  <!-- * [RTC Class](zh-cn/evm_class_rtc.md) -->
-  * [Switch Class](zh-cn/evm_class_switch.md)
-  * [Watchdog Class](zh-cn/evm_class_watchdog.md)
-  * [Timer Class](zh-cn/evm_class_timer.md)
-  * [UART Class](zh-cn/evm_class_uart.md)
-  * [Socket Class](zh-cn/evm_class_socket.md)
+* IOT.JS
+  * [IOT.JS简介](zh-cn/evm_module_iotjs.md)
+  * [Assert](zh-cn/evm_class_assert.md)
+  * [Buffer](zh-cn/evm_class_buffer.md)
+  * [DNS](zh-cn/evm_class_dns.md)
+  * [Events](zh-cn/evm_class_events.md)
+  * [File System](zh-cn/evm_class_fs.md)
+  * [HTTP](zh-cn/evm_class_http.md)
+  * [Module](zh-cn/evm_class_module.md)
+  * [Net](zh-cn/evm_class_net.md)
+  * [Process](zh-cn/evm_class_process.md)
+  * [Timers](zh-cn/evm_class_timers.md)
+  * [ADC](zh-cn/evm_class_adc.md)
+  * [BLE](zh-cn/evm_class_ble.md)
+  * [GPIO](zh-cn/evm_class_gpio.md)
+  * [HTTPS](zh-cn/evm_class_https.md)
+  * [I2C](zh-cn/evm_class_i2c.md)
+  * [PWM](zh-cn/evm_class_pwm.md)
+  * [SPI](zh-cn/evm_class_spi.md)
+  * [TLS](zh-cn/evm_class_tls.md)
+  * [UART](zh-cn/evm_class_uart.md)
+  * [UDP/Datagram](zh-cn/evm_class_udp.md)
+
 
 * 虚拟机标准扩展模块指南
 

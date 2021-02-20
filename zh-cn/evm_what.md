@@ -40,22 +40,14 @@
 | 文件      |    说明|
 | :-------- | --------:|
 | **bsp**| 开发板适配目录 |
-| **bsp/stm32/bearpi_stm32l431**| 小熊派开发板 |
-| **bsp/qemu_cortex_m3**|qemu_cortex_m3目录 |
 | **components**| 第三方组件目录 |
-| **components/zephyr**| zephyr rtos组件目录 |
-| **doc**| 图片文档资源目录 |
-| **drivers**| 驱动适配层 |
-| **ejs**|   ejs主程序evm_main.c目录  | 
+| **docs**| 图片文档资源目录 |
 | **include**|   头文件目录  | 
-| **lib**|   ejs静态库  |
-| **lib/arm-none-eabi-gcc/cortex_m3**|   cortex_m4系列libejs静态库  |
-| **lib/arm-none-eabi-gcc/cortex_m4**|   cortex_m4系列libjese静态库  |
-| **modules**|  模块目录  |
-| **modules/ecma**|  je标准库ecma模块  | 
-| **modules/ecma**|  硬件外设驱动evm模块  | 
+| **lib**|   evm静态库  |
+| **modules**|  iot.js模块目录  |
+| **os**|  操作系统  | 
+| **test**|  测试代码目录  | 
 | **tools**|  工具目录|
-| **tools/evm.sh**|  一键安装evm.sh脚本|
 | **README.md**|   项目说明文档|
 
 
@@ -65,17 +57,7 @@
 + [evm在线帮助手册Github](https://scriptiot.github.io/evm_doc/#/zh-cn/evm_what)
 + [evm在线帮助手册Gitee](https://scriptiot.gitee.io/evm_doc/#/zh-cn/evm_what)
 
-四、EVM 适配开发板
-========================================
-
-参考  **`bsp目录`**， 未来会适配更多的开发板
-
-+ stm32系列
-  + bearpi_stm32l431 小熊派开发板
-  + qemu_cortex_m3  基于qemu模拟cortex_m3
-
-
-五、 EVM问卷调查
+四、 EVM问卷调查
 ========================================
 
 > **欢迎大家投票，选出你最喜欢的物联网开发语言， EVM团队会优先支持!**
@@ -83,7 +65,7 @@
 [EVM支持多语言开发物联网，你最希望支持的语言是哪一种语言?](https://www.wenjuan.com/s/Qre6Vf/)
 
 
-六、贡献代码
+五、贡献代码
 ========================================
 + 在您自己的GitHub账户下Fork **`EVM`** 开源项目；
 + 根据您的需求在本地clone 一份 **`EVM`** 代码；
@@ -91,14 +73,14 @@
 + 创建 pull request，向 **`EVM`** 官方开发分支提交合入请求；
 + **`EVM`** 研发团队会定期review代码，通过测试后合入。
 
-七、加入EVM官方QQ技术交流群
+六、加入EVM官方QQ技术交流群
 ========================================
 
 > 群号：**`399011436`**
 
 ![evm](./image/QQ.jpg)
 
-八、联系我们
+七、联系我们
 ========================================
 + 论坛： [EVM官方技术交流论坛](http://forum.evmiot.com/)
 + 邮箱： scriptiot@aliyun.com
